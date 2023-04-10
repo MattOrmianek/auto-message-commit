@@ -1,11 +1,13 @@
-Github auto-message-commit
+<h1>Github auto-message-commit</h1>
 
 Create auto-message-commit app.
 
+
+<h1>Logic</h1>
 Checking all files changed by git add *.
 
 If new file:
-	find all functions and name + arguments + return + comment on first lines after definition
+-	find all functions and name + arguments + return + comment on first lines after definition
 
 If updated file:
 
@@ -16,31 +18,34 @@ If updated file:
 -    if deleted function:
 
 If deleted file:
-    name of file + names of functions
+-    name of file + names of functions
 
 
-TODO:
+<h1>TODO:</h1>
 - [ ] Check what git commands use
 - [ ] Check what status of edits of files exists on git (new, modified, deleted)
 - [ ] How to get context of git commands in python
 - [X] How to commit using file or other way - git commit -F <file>
 
 
-git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
-	   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
-	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
-	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
-	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
-	   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
-	   [(--trailer <token>[(=|:)<value>])…​] [-S[<keyid>]]
-	   [--] [<pathspec>…​]
+<h1>git commit</h1>
+
+        [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+
+        [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+        [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+        [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+        [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+        [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+        [(--trailer <token>[(=|:)<value>])…​] [-S[<keyid>]]
+        [--] [<pathspec>…​]
 
 
---template=<file>
-When editing the commit message, start the editor with the contents in the given file. The commit.template configuration variable is often used to give this option implicitly to the command. This mechanism can be used by projects that want to guide participants with some hints on what to write in the message in what order. If the user exits the editor without editing the message, the commit is aborted. This has no effect when a message is given by other means, e.g. with the -m or -F options.
+        --template=<file>
+        When editing the commit message, start the editor with the contents in the given file. The commit.template configuration variable is often used to give this option implicitly to the command. This mechanism can be used by projects that want to guide participants with some hints on what to write in the message in what order. If the user exits the editor without editing the message, the commit is aborted. This has no effect when a message is given by other means, e.g. with the -m or -F options.
 
 
-Git status after creating file and add tracking to it:
+<h2>Git status after creating file and add tracking to it:</h2>
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -49,7 +54,7 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	new file:   test_file
 
-Git status after creating python_testing_for-status.py, changing README.md and deleting test_file
+<h2>Git status after creating python_testing_for-status.py, changing README.md and deleting test_file:</h2>
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -70,7 +75,7 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 
-Git status after adding tracking of changes by git add *:
+<h2>Git status after adding tracking of changes by git add *:</h2>
 On branch main
 Your branch is up to date with 'origin/main'.
 
