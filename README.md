@@ -22,3 +22,5 @@ If deleted file:
 TODO:
 - [ ] Check what git commands use
 - [ ] Check what status of edits of files exists on git (new, updated, deleted)
+- [ ] How to get context of git commands in python
+- [ ] How to commit using file or other way
