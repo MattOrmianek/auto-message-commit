@@ -23,7 +23,7 @@ TODO:
 - [ ] Check what git commands use
 - [ ] Check what status of edits of files exists on git (new, updated, deleted)
 - [ ] How to get context of git commands in python
-- [ ] How to commit using file or other way
+- [X] How to commit using file or other way - git commit -F <file>
 
 
 git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]

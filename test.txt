@@ -1,0 +1,1 @@
+Resolved one todo, git commit -F <file> will add context of file to commit message.
