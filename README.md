@@ -24,3 +24,17 @@ TODO:
 - [ ] Check what status of edits of files exists on git (new, updated, deleted)
 - [ ] How to get context of git commands in python
 - [ ] How to commit using file or other way
+
+
+git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+	   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+	   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	   [(--trailer <token>[(=|:)<value>])…​] [-S[<keyid>]]
+	   [--] [<pathspec>…​]
+
+
+--template=<file>
+When editing the commit message, start the editor with the contents in the given file. The commit.template configuration variable is often used to give this option implicitly to the command. This mechanism can be used by projects that want to guide participants with some hints on what to write in the message in what order. If the user exits the editor without editing the message, the commit is aborted. This has no effect when a message is given by other means, e.g. with the -m or -F options.
