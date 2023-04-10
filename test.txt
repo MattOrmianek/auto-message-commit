@@ -1,1 +1,1 @@
-Resolved one todo, git commit -F <file> will add context of file to commit message.
+Checking git status command and adding output to README.md.

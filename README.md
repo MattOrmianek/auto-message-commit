@@ -21,7 +21,7 @@ If deleted file:
 
 TODO:
 - [ ] Check what git commands use
-- [ ] Check what status of edits of files exists on git (new, updated, deleted)
+- [ ] Check what status of edits of files exists on git (new, modified, deleted)
 - [ ] How to get context of git commands in python
 - [X] How to commit using file or other way - git commit -F <file>
 
@@ -38,3 +38,43 @@ git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
 
 --template=<file>
 When editing the commit message, start the editor with the contents in the given file. The commit.template configuration variable is often used to give this option implicitly to the command. This mechanism can be used by projects that want to guide participants with some hints on what to write in the message in what order. If the user exits the editor without editing the message, the commit is aborted. This has no effect when a message is given by other means, e.g. with the -m or -F options.
+
+Git status after creating file and add tracking to it:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test_file
+
+Git status after creating python_testing_for-status.py, changing README.md and deleting test_file
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   test.txt
+	deleted:    test_file
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	python_testing_for_status.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Git status after adding tracking of changes by git add *:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	new file:   python_testing_for_status.py
+	modified:   test.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    test_file
