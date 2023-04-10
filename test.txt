@@ -1,1 +1,1 @@
-Fixing styling of README.md
+Added script to auto add changes, commit with file messgae and push.
