@@ -25,7 +25,9 @@ If deleted file:
 - [ ] Check what git commands use
 - [ ] Check what status of edits of files exists on git (new, modified, deleted)
 - [ ] How to get context of git commands in python
+- [ ] Create script for adding *, commiting and pushing if commit message != old one
 - [X] How to commit using file or other way - git commit -F <file>
+ 
 
 
 <h1>git commit</h1>
