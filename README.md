@@ -22,10 +22,11 @@ If deleted file:
 
 
 <h1>TODO:</h1>
-- [ ] Check what git commands use
+- [ ] Make function to create automate messages for commits - gathered by git log, diff and status
 - [ ] Check what status of edits of files exists on git (new, modified, deleted)
 - [ ] How to get context of git commands in python
 - [ ] Create script for adding *, commiting and pushing if commit message != old one
+- [X] Check what git commands use
 - [X] How to commit using file or other way - git commit -F <file>
  
 

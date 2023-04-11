@@ -1,1 +1,1 @@
-Created first stage of app, string formatting from git status.
+Added other commands to python code, need to create auto gererating message from gathered info.
