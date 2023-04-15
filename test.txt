@@ -1,1 +1,1 @@
-Added other commands to python code, need to create auto gererating message from gathered info.
+Added few details to project.

@@ -21,7 +21,7 @@ def create_commit_message():
     response_from_git_log = subprocess.Popen(["git", "log"],stdout=subprocess.PIPE)
     git_log = fix_formatting(str(response_from_git_log.communicate()[0])[1:])
 
-    print(f"git_status: {git_status}, git_diff: {git_diff}, git_log: {git_log}")
+    #print(f"git_status: {git_status}, git_diff: {git_diff}, git_log: {git_log}")
 
     # search for untracked files and print them
     untracked_files = []
@@ -42,19 +42,21 @@ def last_commit_message():
 
 commit_status = "not_ready"
 
-if sys.argv[1] == "auto":
-    print("Auto mode")
-    commit_status = "ready"
-    message = create_commit_message()
-
-if sys.argv[1] == "manual":
-    print("Manual mode")
-    try:
-        message = sys.argv[2]
+try:
+    if sys.argv[1] == "auto":
+        print("Auto mode")
         commit_status = "ready"
-    except:
-        print("No message")
+        message = create_commit_message()
 
+    if sys.argv[1] == "manual":
+        print("Manual mode")
+        try:
+            message = sys.argv[2]
+            commit_status = "ready"
+        except:
+            print("No message")
+except Exception as e:
+    print(f"Error: {e}")
 if commit_status == "ready" and sys.argv[1] == "auto":
     print("Commiting from file: git commit -F file")
     print(f"Message: {message}")

@@ -2,6 +2,10 @@
 
 Create auto-message-commit app.
 
+<h1>Usage</h1>
+
+python3 app.py <auto/manual>
+
 
 <h1>Logic</h1>
 Checking all files changed by git add *.
@@ -94,3 +98,9 @@ Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	deleted:    test_file
+
+
+<h1>Notes</h1>
+- To chceck changes use - and + as added and deleted stuff from files, it comes from 'git diff'.
+- Maybe try to use openAI to summarize differences.
+- Create multiple versions to run script with parameters for things that git suggests.
