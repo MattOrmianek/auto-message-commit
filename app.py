@@ -53,8 +53,8 @@ try:
         try:
             message = sys.argv[2]
             commit_status = "ready"
-        except:
-            print("No message")
+        except Exception as e:
+            print(f"Error: {e}")
 except Exception as e:
     print(f"Error: {e}")
 if commit_status == "ready" and sys.argv[1] == "auto":
