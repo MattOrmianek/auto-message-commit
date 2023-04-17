@@ -12,13 +12,13 @@ def create_commit_message():
     #get git diff
     #get git log
 
-    response_from_git_status = subprocess.Popen(["git", "status"],stdout=subprocess.PIPE)
+    response_from_git_status = subprocess.Popen(["/usr/bin/git", "status"],stdout=subprocess.PIPE)
     git_status = fix_formatting(str(response_from_git_status.communicate()[0])[1:])
 
-    response_from_git_diff = subprocess.Popen(["git", "diff"],stdout=subprocess.PIPE)
+    response_from_git_diff = subprocess.Popen(["/usr/bin/git", "diff"],stdout=subprocess.PIPE)
     git_diff = fix_formatting(str(response_from_git_diff.communicate()[0])[1:])
 
-    response_from_git_log = subprocess.Popen(["git", "log"],stdout=subprocess.PIPE)
+    response_from_git_log = subprocess.Popen(["/usr/bin/git", "log"],stdout=subprocess.PIPE)
     git_log = fix_formatting(str(response_from_git_log.communicate()[0])[1:])
 
     #print(f"git_status: {git_status}, git_diff: {git_diff}, git_log: {git_log}")

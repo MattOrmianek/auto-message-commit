@@ -1,1 +1,1 @@
-Added few details to project.
+Fixed issues from codefactor.io
