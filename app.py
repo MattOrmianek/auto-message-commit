@@ -22,7 +22,6 @@ def create_commit_message():
     # search for untracked files and print them
     untracked_files = []
     for line in git_status.splitlines():
-        print(line)
         if line.startswith("Untracked files:"):
             untracked_files.append(line)
     print(untracked_files)
@@ -40,12 +39,12 @@ commit_status = "not_ready"
 
 try:
     if sys.argv[1] == "auto":
-        print("Auto mode")
+
         commit_status = "ready"
         message = create_commit_message()
 
     if sys.argv[1] == "manual":
-        print("Manual mode")
+
         try:
             message = sys.argv[2]
             commit_status = "ready"
